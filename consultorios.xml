@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="view_consultorio_tree">
+            <field name="model">gnuhealth.consulting_room</field>
+            <field name="type">tree</field>
+            <field name="name">gnuhealth_consulting_room_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_consultorio_form">
+            <field name="model">gnuhealth.consulting_room</field>
+            <field name="type">form</field>
+            <field name="name">gnuhealth_consulting_room_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_consultorios">
+            <field name="name">Consultorios</field>
+            <field name="res_model">gnuhealth.consulting_room</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_consultorios_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="view_consultorio_tree"/>
+            <field name="act_window" ref="act_consultorios"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_consultorios_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="view_consultorio_form"/>
+            <field name="act_window" ref="act_consultorios"/>
+        </record>
+
+        <menuitem
+            id="menu_consultorios"
+            parent="health.gnuhealth_menu"
+            action="act_consultorios"
+            name="Consultorios"
+            sequence="120"
+            icon="gnuhealth-list"/>
+    </data>
+</tryton>
