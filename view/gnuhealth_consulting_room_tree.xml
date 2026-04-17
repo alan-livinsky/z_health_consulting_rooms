@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
-<tree string="Consultorios">
+<tree>
     <field name="name" string="Nombre"/>
 </tree>
