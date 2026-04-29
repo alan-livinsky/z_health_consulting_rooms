@@ -26,7 +26,10 @@ major_version, minor_version = 6, 0
 
 requires = []
 
-fiuner_modules = ['health_appointment_screen_fiuner']
+fiuner_modules = [
+    'health_appointment_fiuner',
+    'health_appointment_screen_fiuner',
+]
 
 for dep in info.get('depends', []):
     if dep in fiuner_modules:
